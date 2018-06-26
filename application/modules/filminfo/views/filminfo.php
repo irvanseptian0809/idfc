@@ -502,7 +502,7 @@ if(isset($lang) && $lang == "en"){
 
                     <div class="col-md-12">
                         <div class="col-md-12" style="margin-left:-15px;"><!--padding-left:170px;padding-right:180px; kerjaan bayu-->
-                            <div class="col-md-3" style="margin-left:-3px;"><!--kerjaan bayu-->
+                            <div class="col-md-3" style="margin-left:5px;"><!--kerjaan bayu-->
 								<br><!--kerjaan bayu-->
                                 <?php if($lang == "en"){?>
                                     <span class="col-md-12 item-left-head" style="font-size:34px !important;padding-bottom:6px;">THIS WEEK AT</span>
