@@ -1,3 +1,23 @@
+<?php
+//kerjaan bayu
+	$this->load->library('user_agent');
+	$browser = $this->agent->browser();
+//batas kerjaan bayu
+?>
+<style type="text/css">
+.row{
+				margin-right: 0px;
+				margin-left: 0px;
+			}
+.row-list {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.scroll-assist{
+	background-color:#9c1e1f;
+}
+</style>
 <body class="scroll-assist" style="background-color:#013969;"  data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)" data-reveal-timing="1000">
 
 <?php
@@ -128,7 +148,7 @@ if(isset($lang) && $lang == "en"){
     <!--end of modal-container-->
     <div class="main-container transition--fade">
 
-        <div class="col-md-12" style="padding:0;">
+        <!--<div class="col-md-12" style="padding:0;">-->
             <div class="owl-theme owl-carousel" id="carousel115">
 
 
@@ -141,20 +161,60 @@ if(isset($lang) && $lang == "en"){
             foreach ($banner as $banner) {
             ?>
                 <div class="item">
-                    <div class="img-src" style="background-image: url('<?php echo 'http://116.206.196.146/idfilm/public/'.$banner->image;?>');background-size:100% auto;">&nbsp;</div>
+					<img src="<?php echo 'http://116.206.196.146/idfilm/public/'.$banner->image;?>">
+                    <!--<div class="img-src" style="background-image: url('<?php //echo 'http://116.206.196.146/idfilm/public/'.$banner->image;?>');background-size:100% auto;">&nbsp;</div>-->
                 </div>
             <?php
             }
             ?>
             </div>
-            <div class="slider-nav">
+			<!--kerjaan bayu-->
+			<style type="text/css">
+				@media (min-width:280px){
+					.slider-nav{
+						margin-top: -50px;
+					}
+				}
+				@media (min-width:640px){
+					.slider-nav{
+						margin-top: -40px;
+					}
+				}
+				@media (min-width:640px){
+					.slider-nav{
+						margin-top: -25px;
+					}
+				}
+				@media (min-width:900px){
+					.slider-nav{
+						margin-top: -10px;
+					}
+				}
+				@media (min-width:980px){
+					.slider-nav{
+						margin-top: 0px;
+					}
+				}
+				@media (max-width:768px){
+					.form-pencarian{
+						margin-top:-45px;
+					}
+				}
+				@media (min-width:768px){
+					.form-pencarian{
+						margin-top:-50px;
+					}
+				}
+			</style>
+			<!--batas kerjaan bayu-->
+            <div class="slider-nav" style="max-width:1300px;"><!--kerjaan bayu-->
                 <span class="slider-nav-item prev" data-carouselid="carousel115"><span class="fa fa-angle-left"></span></span>
                 <span class="slider-nav-item next" data-carouselid="carousel115"><span class="fa fa-angle-right"></span></span>
             </div>
-        </div>
+        <!--</div>-->
 
         <section class="project-single-process" id="watchfilms" style="margin-top:35px;">
-            <div class="container" style="width: 100%;padding-left:0px;padding-right:0px;">
+            <div class="container form-pencarian" style="width: 100%;padding-left:0px;padding-right:0px;"><!--kerjaan bayu-->
             <?php if(isset($_GET['category']) == "profile"){?>
                 <div class="row"></div>
                 <div class="title-sort">
@@ -189,7 +249,25 @@ if(isset($lang) && $lang == "en"){
                             </div>
             <?php }?>
                 <div class="row row-list" style="padding-left:0px;padding-right:0px;padding-bottom:10px;">
-                    <div class="col-md-12 list-item-gray" style="margin-bottom: 30px;margin-left:17px;width:1298px;"><!--kerjaan bayu margin-left:17px;width:1298px; -->
+					<!--kerjaan bayu-->
+					<style type="text/css">
+						@media (min-width:280px){
+							.list-item-gray{
+								width:100%;
+							}
+						}
+						@media (max-width:769px){
+							.title-sort-input input[type="text"] {
+								border-radius: 0px;
+								padding-left: 0px;
+								padding-right: 0px;
+								width: 100%;
+								display: block;
+							}
+						}
+					</style>
+					<!--batas kerjaan bayu-->
+                    <div class="col-md-12 list-item-gray"><!--kerjaan bayu margin-left:17px;width:1298px; -->
                         <div class="title-sort-input" style="background-color:white;border-bottom: 2px solid #EC2B2E;">
                           <input type="text" class="text-search" value="<?php if($text<>'0'){ echo $text; }?>" style="color:#333;line-height: 10px;" placeholder="<?php echo $this->session->userdata('search here');?>">
                           <i class="fa fa-search" aria-hidden="true" id="search" style="cursor:pointer;"></i>
@@ -274,6 +352,19 @@ if(isset($lang) && $lang == "en"){
                                     <input type="button" class="btn-advance-filter" value="Reset">
                                 </div>
                             </div>
+							<!--kerjaan bayu-->
+							<style type="text/css">
+							@media (max-width: 767px){
+									.advance-filter-body {
+										color: black;
+										font-size: 14px;
+										background-color: #56c4c6;
+										width: 100%;
+										padding: 5px 10px 5px 10px;
+									}
+								}
+							</style>
+							<!--batas kerjaan bayu-->
                             <div class="text-left label-bold advance-filter-body" style="min-height: 280px;background-color: #56c4c6;">
                                 <!-- <div class="col-md-2">
                                     <span style="font-style:italic;" class="label-bold">Type</span>
@@ -291,59 +382,59 @@ if(isset($lang) && $lang == "en"){
                                         <input type="radio" name="type" value="director"> Director
                                     </div>
                                 </div> -->
-                                <div class="col-md-2">
+                                <div class="col-md-2" style="padding-left:0px;"><!--kerjaan bayu-->
                                     <span style="font-style:italic;" class="label-bold">Category</span>
                                 </div>
-                                <div class="col-md-10" style="padding-bottom: 10px;">
-                                  <div class="col-md-4">
+                                <div class="col-md-10" style="padding-bottom: 10px;padding-left:0px;"><!--kerjaan bayu-->
+                                  <div class="col-md-4" style="padding-left:0px;"><!--kerjaan bayu-->
                                       <input type="radio" name="category" value="film" <?php if(strpos(isset($_GET['category']),'film') !== false){ echo "checked='true'"; }?>> Film
                                   </div>
-                                  <div class="col-md-4">
+                                  <div class="col-md-4" style="padding-left:0px;"><!--kerjaan bayu-->
                                       <input type="radio" name="category" value="profile" <?php if(strpos(isset($_GET['category']),'profile') !== false){ echo "checked='true'"; }?>> Profiles
                                   </div>
-                                  <div class="col-md-4">
+                                  <div class="col-md-4" style="padding-left:0px;"><!--kerjaan bayu-->
                                       <input type="radio" name="category" value="company" <?php if(strpos(isset($_GET['category']),'company') !== false){ echo "checked='true'"; }?>> Companies
                                   </div>
                                 </div>
 
-                                <div class="col-md-2">
+                                <div class="col-md-2" style="padding-left:0px;"><!--kerjaan bayu-->
                                     <span style="font-style:italic;" class="label-bold">Free / Paid</span>
                                 </div>
-                                <div class="col-md-10" style="padding-bottom: 10px;">
-                                    <div class="col-md-4">
+                                <div class="col-md-10" style="padding-bottom: 10px;padding-left:0px;"><!--kerjaan bayu-->
+                                    <div class="col-md-4" style="padding-left:0px;"><!--kerjaan bayu-->
                                         <input type="checkbox" name="paid" value="all" <?php if(strpos($paid,'all') !== false){ echo "checked='true'"; }?>> All (<?php echo $film_total?>)<br>
                                         <input type="checkbox" name="paid" value="free" <?php if(strpos($paid,'free') !== false){ echo "checked='true'"; }?>> Free Movies (<?php echo $film_free?>)
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4" style="padding-left:0px;"><!--kerjaan bayu-->
                                         <input type="checkbox" name="paid" value="paid" <?php if(strpos($paid,'paid') !== false){ echo "checked='true'"; }?>> Paid Movies (<?php echo $film_paid?>) <br>
                                         <input type="checkbox" name="paid" value="0.15" <?php if(strpos($paid,'0.15') !== false){ echo "checked='true'"; }?>> Paid 0 - 15.000
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4" style="padding-left:0px;"><!--kerjaan bayu-->
                                         <input type="checkbox" name="paid" value="15.50" <?php if(strpos($paid,'15.50') !== false){ echo "checked='true'"; }?>> Paid 15.000 - 50.000 <br>
                                         <input type="checkbox" name="paid" value="50.100" <?php if(strpos($paid,'50.100') !== false){ echo "checked='true'"; }?>> Paid 50.000 - 100.000
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-2" style="padding-left:0px;"><!--kerjaan bayu-->
                                     <span style="font-style:italic;" class="label-bold">Length</span>
                                 </div>
-                                <div class="col-md-10" style="padding-bottom: 10px;">
-                                    <div class="col-md-4">
+                                <div class="col-md-10" style="padding-bottom: 10px;padding-left:0px;"><!--kerjaan bayu-->
+                                    <div class="col-md-4" style="padding-left:0px;"><!--kerjaan bayu-->
                                         <input type="checkbox" name="length" value="all" <?php if(strpos($length,'all') !== false){ echo "checked='true'"; }?>> All<br>
                                         <input type="checkbox" name="length" value="0.35" <?php if(strpos($length,'0.35') !== false){ echo "checked='true'"; }?>> 0 - 35 (<?php echo $film_durasi_0_35?>)
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4" style="padding-left:0px;"><!--kerjaan bayu-->
                                         <input type="checkbox" name="length" value="35.45" <?php if(strpos($length,'35.45') !== false){ echo "checked='true'"; }?>> 35 - 45 (<?php echo $film_durasi_35_45?>) <br>
                                         <input type="checkbox" name="length" value="45.60" <?php if(strpos($length,'45.60') !== false){ echo "checked='true'"; }?>> 45 - 60 (<?php echo $film_durasi_45_60?>)
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4" style="padding-left:0px;"><!--kerjaan bayu-->
                                         <input type="checkbox" name="length" value="60" <?php if(strpos($length,'60') !== false){ echo "checked='true'"; }?>> More than 60 (<?php echo $film_durasi_60?>)
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-2" style="padding-left:0px;"><!--kerjaan bayu-->
                                     <span style="font-style:italic;" class="label-bold">Genre</span>
                                 </div>
-                                <div class="col-md-10" id="show-more-genre">
-                                  <div class="col-md-3">
+                                <div class="col-md-10" id="show-more-genre" style="padding-left:0px;"><!--kerjaan bayu-->
+                                  <div class="col-md-3" style="padding-left:0px;"><!--kerjaan bayu-->
                                   <?php
                                   $a = 1;
 
@@ -369,7 +460,7 @@ if(isset($lang) && $lang == "en"){
                                     $amod = $a % 2;
                                     if($amod==0){
                                       echo '<input type="checkbox" name="genre" value="'.$row->id.'" '.$checked2.'> '.$row->title;
-                                      echo '</div><div class="col-md-3">';
+                                      echo '</div><div class="col-md-3" style="padding-left:0px;">';/*--kerjaan bayu--*/
                                     }else{
                                       echo '<input type="checkbox" name="genre" value="'.$row->id.'" '.$checked2.'> '.$row->title.'<br>';
                                     }
@@ -394,10 +485,10 @@ if(isset($lang) && $lang == "en"){
                                         <input type="checkbox" name="other" value="subtitle" <?php //if(strpos($other,'subtitle') !== false){ echo "checked='true'"; }?>> Subtitle
                                     </div>
                                 </div> -->
-                                <div class="col-md-6 text-center">
+                                <div class="col-md-6 text-center" style="margin-left: -13px;"><!--kerjaan bayu-->
                                     <button class="btn-apply-filter">Apply Filters</button>
                                 </div>
-                                <div class="col-md-6 text-center" style="padding-bottom: 10px;">
+                                <div class="col-md-6 text-center" style="padding-bottom: 10px;margin-left: -13px;"><!--kerjaan bayu-->
                                     <button class="btn-clear-filter">Clear Filters</button>
                                 </div>
                                 <div class="clearfix"></div>
@@ -410,17 +501,19 @@ if(isset($lang) && $lang == "en"){
                     <!-- Feature Films -->
 
                     <div class="col-md-12">
-                        <div class="col-md-12" style=""><!--padding-left:170px;padding-right:180px;-->
-                            <div class="col-md-3">
+                        <div class="col-md-12" style="margin-left:-15px;"><!--padding-left:170px;padding-right:180px; kerjaan bayu-->
+                            <div class="col-md-3" style="margin-left:-3px;"><!--kerjaan bayu-->
+								<br><!--kerjaan bayu-->
                                 <?php if($lang == "en"){?>
-                                    <span class="col-md-12 item-left-head" style="font-size:28px;padding-bottom:6px;">THIS WEEK AT</span>
+                                    <span class="col-md-12 item-left-head" style="font-size:34px !important;padding-bottom:6px;">THIS WEEK AT</span>
                                     <span class="col-md-12 item-left-desc big-text" style="font-size:34px !important;padding-bottom:120px;">THE CINEMAS</span>
                                 <?php }else{?>
-                                    <span class="col-md-12 item-left-head" style="font-size:28px;padding-bottom:6px;">MINGGU INI</span>
+                                    <span class="col-md-12 item-left-head" style="font-size:34px !important;padding-bottom:6px;">MINGGU INI</span>
                                     <span class="col-md-12 item-left-desc big-text" style="font-size:34px !important;padding-bottom:120px;">DI BIOSKOP</span>
                                 <?php }?>
                             </div>
-                            <div class="col-md-9">
+							<br><!--kerjaan bayu-->
+                            <div class="col-md-9" style="margin-left:-15px;"><!--kerjaan bayu-->
                                 <div class="owl-theme owl-carousel" id="carousel1">
                                   <?php foreach ($still_in_cinema->result() as $row){
                                     $this->db->where('id', trim($row->director_id));
@@ -479,20 +572,46 @@ if(isset($lang) && $lang == "en"){
                             </div>
                         </div>
                     </div>
+					<!--kerjaan bayu-->
+						<style type="text/css">
+							.segera-tayang-margin{
+								margin-top:25px;
+								margin-bottom:25px;
+								margin-left:17px;
+								width:1298px;
+							}
 
-                    <div class="col-md-12 list-item-gray" style="margin-top:25px;margin-bottom:25px;margin-left:17px;width:1298px;"><!--kerjaan bayu margin-left:17px;width:1298px;-->
+							@media(min-width:280px){
+								.segera-tayang-margin{
+									margin-top:25px;
+									margin-bottom:25px;
+									margin-left:0px;
+									width:100%;
+								}
+							}
+							@media(min-width:992px){
+								.margin-coming_soon{
+									margin-left: 5px;
+									margin-top:-25px;
+								}
+							}
+						</style>
+					<!--batas kerjaan bayu-->
+
+                    <div class="col-md-12 list-item-gray segera-tayang-margin" style=""><!--kerjaan bayu margin-left:17px;width:1298px;-->
                         <div class="col-md-12" style=""><!--padding-left:170px;padding-right:180px;-->
                             <div class="col-md-3">
                                 <?php if($lang == "en"){?>
-                                <span class="col-md-12 item-left-desc" style="font-size:30px;padding-bottom:6px;">COMING</span>
+                                <span class="col-md-12 item-left-desc" style="font-size:34px !important;padding-bottom:6px;">COMING</span><br>
                                 <span class="col-md-12 item-left-head big-text" style="font-size:34px !important;padding-bottom:120px;">SOON</span>
                                 <?php }else{?>
-                                <span class="col-md-12 item-left-desc" style="font-size:30px;padding-bottom:6px;margin-left: -28px;">SEGERA</span>
+                                <span class="col-md-12 item-left-desc" style="font-size:34px !important;padding-bottom:6px;margin-left: -28px;">SEGERA</span><br>
                                 <span class="col-md-12 item-left-head big-text" style="font-size:34px !important;padding-bottom:120px;margin-left: -28px;">TAYANG</span>
                                 <?php }?>
                             </div>
-                            <div class="col-md-9">
-                                <div class="owl-theme owl-carousel" id="carousel2">
+							<br><!--kerjaan bayu-->
+                            <div class="col-md-9" style="margin-left:-45px;margin-right:-15px;"><!--kerjaan bayu-->
+                                <div class="owl-theme owl-carousel margin-coming_soon" id="carousel2"><!--kerjaan bayu-->
                                   <?php
 
                                   $jum = count($coming_soon->result());
@@ -548,11 +667,20 @@ if(isset($lang) && $lang == "en"){
 
                                   ?>
                                 </div>
+								<!--kerjaan bayu-->
+								<style type="text/css">
+										@media(min-width:992px){
+											.costumNav2 .next1{
+												right:-23px !important;
+											}
+										}
+									</style>
+								<!--batas kerjaan bayu-->
                                 <div class="costumNav2" style="width:97.5% !important;">
                                     <span class="cnav2-item prev" data-carouselid="carousel2">
                                         <span class="fa fa-chevron-left"></span>
                                     </span>
-                                    <span class="cnav2-item next" data-carouselid="carousel2">
+                                    <span class="cnav2-item next next1" data-carouselid="carousel2">
                                         <span class="fa fa-chevron-right"></span>
                                     </span>
                                 </div>
@@ -561,17 +689,18 @@ if(isset($lang) && $lang == "en"){
                     </div>
 
                     <div class="col-md-12">
-                        <div class="col-md-12" style=""><!--padding-left:170px;padding-right:180px;-->
-                            <div class="col-md-3">
+                        <div class="col-md-12" style="margin-left:-15px;"><!--padding-left:170px;padding-right:180px; kerjaan bayu-->
+                            <div class="col-md-3" style="margin-left:-3px;"><!--kerjaan bayu-->
                                 <?php if($lang == "en"){?>
-                                <span class="col-md-12 item-left-desc" style="font-size:30px;padding-bottom:6px;">RELATED</span>
+                                <span class="col-md-12 item-left-desc" style="font-size:34px !important;padding-bottom:6px;">RELATED</span>
                                 <span class="col-md-12 item-left-head big-text" style="font-size:34px !important;padding-bottom:120px;">FILMS</span>
                                 <?php }else{?>
-                                <span class="col-md-12 item-left-desc" style="font-size:30px;padding-bottom:6px;">FILM</span>
+                                <span class="col-md-12 item-left-desc" style="font-size:34px !important;padding-bottom:6px;">FILM</span>
                                 <span class="col-md-12 item-left-head big-text" style="font-size:34px !important;padding-bottom:120px;">TERKAIT</span>
                                 <?php }?>
                             </div>
-                            <div class="col-md-9">
+							<br><!--kerjaan bayu-->
+                            <div class="col-md-9" style="margin-left:-15px;"><!--kerjaan bayu-->
                                 <div class="owl-theme owl-carousel" id="carousel3">
                                   <!-- DIRECTOR TERKAIT -->
                                   <?php foreach ($film_terkait->result() as $row){
@@ -588,7 +717,7 @@ if(isset($lang) && $lang == "en"){
                                         <a href="<?php echo base_url().'detail/index/'.url_title(strtolower($row->title)).'/'.$row->id; ?>">
                                           <div class="hover-element hover-element-1 wow flipInX" data-wow-delay="0.4s" data-wow-duration="0.6s" data-title-position="top,left">
                                               <div class="hover-element__initial" rel='popover'>
-                                                  <img alt="Pic" src="<?php echo 'http://116.206.196.146/'.$row->cover?>" />
+                                                  <img alt="Pic" src="<?php echo 'http://116.206.196.146/'.$row->cover?>" style="height:194px;"/><!--kerjaan bayu style="height:194px;"-->
                                               </div>
                                               <div class="hover-element__reveal" data-overlay="9">
                                                   <div class="boxed" style="font-size: 12px">
@@ -1209,7 +1338,7 @@ if(isset($lang) && $lang == "en"){
             });
 
             <?php
-            $showless = '<div class="col-md-3">';
+            $showless = '<div class="col-md-3" style="padding-left:0px;">';/*--kerjaan bayu--*/
             $a = 1;
             $posall = strpos($genre,'all');
             if($posall){
@@ -1233,14 +1362,14 @@ if(isset($lang) && $lang == "en"){
               $amod = $a % 2;
               if($amod==0){
                 $showless = $showless.'<input type="checkbox" name="genre" value="'.$row->id.'" '.$checked2.'> '.$row->title;
-                $showless = $showless.'</div><div class="col-md-3">';
+                $showless = $showless.'</div><div class="col-md-3" style="padding-left:0px;">';/*--kerjaan bayu--*/
               }else{
                 $showless = $showless.'<input type="checkbox" name="genre" value="'.$row->id.'" '.$checked2.'> '.$row->title.'<br>';
               }
             }
             $showless = $showless.'</div>';
 
-            $showmore = '<div class="col-md-3">';
+            $showmore = '<div class="col-md-3" style="padding-left:0px;">';/*--kerjaan bayu--*/
             $b = 1;
             $showmore = $showmore.'<input type="checkbox" name="genre" value="All" '.$checkedall2.'> All <br>';
             foreach ($genre_more->result() as $row){
@@ -1258,7 +1387,7 @@ if(isset($lang) && $lang == "en"){
               $bmod = $b % 5;
               if($bmod==0){
                 $showmore = $showmore.'<input type="checkbox" name="genre" value="'.$row->id.'" '.$checked2.'> '.$row->title;
-                $showmore = $showmore.'</div><div class="col-md-3">';
+                $showmore = $showmore.'</div><div class="col-md-3" style="padding-left:0px;">';/*--kerjaan bayu--*/
               }else{
                 $showmore = $showmore.'<input type="checkbox" name="genre" value="'.$row->id.'" '.$checked2.'> '.$row->title.'<br>';
               }
@@ -1482,7 +1611,8 @@ if(isset($lang) && $lang == "en"){
                     $.fn.carMove(owl11.attr('id'), this);
                 }
             });
-            owl115.owlCarousel({
+			//kerjaan bayu
+            /*owl115.owlCarousel({
                 items : 1,
                 dots: false,
                 margin: 100,
@@ -1490,7 +1620,22 @@ if(isset($lang) && $lang == "en"){
                 afterMove: function(){
                     $.fn.carMove(owl115.attr('id'), this);
                 }
-            });
+            });*/
+			owl115.owlCarousel({
+				//navigation : true, // Show next and prev buttons
+				//slideSpeed : 300,
+				//paginationSpeed : 400,
+				autoplay: true,
+				singleItem:true,
+				//items : 1,
+				afterMove: function(){
+					//$('.slider-nav .next').show();
+					//$('.slider-nav .prev').show();
+                    $.fn.carMove(owl115.attr('id'), this);
+                }
+			});
+			//batas kerjaan bayu
+			//batas kerjaan bayu
             $.fn.togglePrev("carousel1",0);
             $.fn.togglePrev("carousel2",0);
             $.fn.togglePrev("carousel3",0);
