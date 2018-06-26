@@ -1,0 +1,37 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/system.*
+RewriteRule ^(.*)$ index.php?/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?/$1 [L]
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^indonesianfilmcenter\.com$
+RewriteRule ^(.*) http://www.indonesianfilmcenter.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^idfilmcentre\.com$
+RewriteRule ^(.*) http://www.indonesianfilmcenter.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^idfilmcenter\.com$
+RewriteRule ^(.*) http://www.indonesianfilmcenter.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^indonesianfilmcentre\.com$
+RewriteRule ^(.*) http://www.indonesianfilmcenter.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^pusatfilmindonesia\.com$
+RewriteRule ^(.*) http://www.indonesianfilmcenter.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.idfilmcentre\.com$
+RewriteRule ^(.*) http://www.indonesianfilmcenter.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.idfilmcenter\.com$
+RewriteRule ^(.*) http://www.indonesianfilmcenter.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.indonesianfilmcentre\.com$
+RewriteRule ^(.*) http://www.indonesianfilmcenter.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.pusatfilmindonesia\.com$
+RewriteRule ^(.*) http://www.indonesianfilmcenter.com/$1 [R=301,L]
+
+Redirect 301 "/pages/filmbox" http://www.indonesianfilmcenter.com/watchfilms/
+Redirect 301 "/pages/filminfo" http://www.indonesianfilmcenter.com/filminfo/
+Redirect 301 "/pages/filmshop" http://www.indonesianfilmcenter.com/watchfilm/
+Redirect 301 "/pages/filmnews" http://www.indonesianfilmcenter.com/filmnews/
+Redirect 301 "/pages/archive" http://www.indonesianfilmcenter.com/filmarchive/
+
+Redirect 301 "/filmbox" http://www.indonesianfilmcenter.com/watchfilms/
