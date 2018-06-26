@@ -599,7 +599,7 @@ if(isset($lang) && $lang == "en"){
 					<!--batas kerjaan bayu-->
 
                     <div class="col-md-12 list-item-gray segera-tayang-margin" style=""><!--kerjaan bayu margin-left:17px;width:1298px;-->
-                        <div class="col-md-12" style=""><!--padding-left:170px;padding-right:180px;-->
+                        <div class="col-md-12" style="margin-left:5px;"><!--padding-left:170px;padding-right:180px;-->
                             <div class="col-md-3">
                                 <?php if($lang == "en"){?>
                                 <span class="col-md-12 item-left-desc" style="font-size:34px !important;padding-bottom:6px;">COMING</span><br>
@@ -690,7 +690,7 @@ if(isset($lang) && $lang == "en"){
 
                     <div class="col-md-12">
                         <div class="col-md-12" style="margin-left:-15px;"><!--padding-left:170px;padding-right:180px; kerjaan bayu-->
-                            <div class="col-md-3" style="margin-left:-3px;"><!--kerjaan bayu-->
+                            <div class="col-md-3" style="margin-left:5px;"><!--kerjaan bayu-->
                                 <?php if($lang == "en"){?>
                                 <span class="col-md-12 item-left-desc" style="font-size:34px !important;padding-bottom:6px;">RELATED</span>
                                 <span class="col-md-12 item-left-head big-text" style="font-size:34px !important;padding-bottom:120px;">FILMS</span>
